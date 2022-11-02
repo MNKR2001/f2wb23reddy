@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  h1= title
+  - var results=[{model:"Himalayan", cylindercapacity:1,colour :"black"},{model:"bullet", cylindercapacity:2,color:"white"},{model:"interceptor", cylindercapacity:3,color:"brown"}];
+    
+  
+  div(class="container-fluid")
+    div(class="row")
+      each item in results
+        div(class="col-sm-2") model is #{item.model} <br /> cylindercapcity is #{item.cylindercapacity} <br /> colour is #{item.colour}
+
+  
