@@ -7,7 +7,12 @@ block content
   
   div(class="container-fluid")
     div(class="row")
-      each item in results
-        div(class="col-sm-2") model is #{item.model} <br /> cylindercapcity is #{item.cylindercapacity} <br /> colour is #{item.colour}
+      each item, index in results
+        div(class="col-sm-2",onclick=`buy(${index})`) model is #{item.model} <br /> cylindercapcity is #{item.cylindercapacity} <br /> colour is #{item.colour}
 
+  script.
+   function buy(x) 
+   {
+     alert(`You purchased item ${x}`)
+   }
   
