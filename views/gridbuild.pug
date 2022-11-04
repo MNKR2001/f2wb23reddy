@@ -6,11 +6,11 @@ block content
   -var rows=Number(query.rows) ;
   -var col=Number(query.cols);
   if !Number.isInteger(rows) || !Number.isInteger(col)
-   p Either row or column is not an integer
+   p the selected number is either row or coloumn
   else if !(rows<=10 && rows>=1)
-   p rows should be in the range 1 to 10
+   p the row should range from 1 to 10
   else if !(col<=10 && col>=1)
-   p columns should be in the range 1 to 10
+   p the coloumn should range from 1 to 10
   else
    table#outer
     - for (let i = 0; i < rows; i++) {
